@@ -1,0 +1,40 @@
+
+</head>
+<body>
+
+<script src="http://tools.eti.pw/m3u8-player-online/jquery-1.10.2.min.js"></script>
+<script type='text/javascript' src='http://tools.eti.pw/m3u8-player-online/clappr.min.js?ver=123'></script>
+<script src="http://tools.eti.pw/m3u8-player-online/jquery.ba-throttle-debounce.min.js"></script>
+<script src="http://tools.eti.pw/m3u8-player-online/jwplayer.js"></script>
+<script>
+$.ajaxSetup({
+cache: false
+});
+</script>
+
+<div id="jsonploader"></div>
+
+
+<div id='video_player1' style='width:1000px; height:600px' title='M3U8 online player'></div>
+<script language='JavaScript'>
+player = new Clappr.Player(
+{
+	parentId: '#video_player1',
+	autoPlay: false,
+	height: '600px',
+	width: '1000px',
+	mediacontrol:
+	{
+		seekbar: '#0AF2F2',
+		buttons: '#0AF2F2'
+	},
+	language: 'bg-BG',
+	strings: {
+		'bg-BG': {
+			'live': 'M3U8 Player',
+			'back_to_live': 'назад',
+		}
+	},
+	source:'http://acdn.bdixsports.live:1935/live/event.stream/chunklist_w30381804_tkYmRpeHNwb3J0c3Rva2VuZW5kdGltZT0xNjUwMTczMTQwJmJkaXhzcG9ydHN0b2tlbnN0YXJ0dGltZT0xNjUwMTY2MTQwJmJkaXhzcG9ydHN0b2tlbmhhc2g9djNRblYtUl96aXl4U0drRWl2b09HaG5MdmF2bDgxVzFZeWZSUlJ5V2IwST0=.m3u8',
+});
+</script>
